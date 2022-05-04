@@ -1,0 +1,614 @@
+/* ---Variables--- */
+$colorprimario: white;
+$colorsecundario: #f77f00;
+$colorterciario: black;
+
+$fontS: 1.5em;
+$fontM: 2em;
+$fontL: 2.5em;
+
+
+
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: $colorterciario;
+}
+
+/* ---Header--Index--- */
+
+.NavBarSec{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $colorterciario;
+    flex-wrap: wrap;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    z-index: 1000;
+
+    ul{
+        display: flex;
+        list-style: none;
+        margin:auto 0px;
+
+        li{
+            border-left: 1px $colorprimario solid;
+
+            &:last-child{
+                border-right: 1px $colorprimario solid;
+            }
+
+            &:hover{
+                background-color: $colorsecundario;
+            }
+        }
+    
+        a{
+            text-decoration: none;
+            color: $colorprimario;
+            font-size: $fontS;
+            padding: 0px 40px;
+            
+        }
+    }
+
+    div{
+        display: flex;
+
+        p{
+            color: $colorprimario;
+            margin: auto;
+            font-size: $fontM;
+        }
+
+        img{
+            width: 70px;
+            animation: rotationy 7s infinite linear;
+        }
+    }
+
+    
+}
+
+.video{
+    video{
+        height: 70vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.IndexFrase{
+    grid-area: 'frase';
+    color: $colorprimario;
+    width: 90%;
+    margin:100px auto 100px;
+    padding: 20px 100px;
+
+    h2{
+        color:$colorsecundario;
+        font-size: $fontL;
+        padding: 0px 0px 40px;
+    }
+
+    p{
+        font-size: $fontS;
+        text-align: justify;
+        border-top: 1px $colorprimario solid;
+        padding: 40px 0px 0px;
+    }
+}
+
+/* carrusel bootstrap index */
+
+.carousel{
+    width: 70%;
+    margin: 100px auto;
+    .carousel-inner{
+        width: 80%;
+        margin: auto;
+        img{
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        margin: auto 0px;
+        width: 5%;
+    }
+}
+
+/* Links secciones con imagenes */
+
+.IndexMain{
+    grid-area: 'main';
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 80vh;
+    width: 70%;
+    grid-gap: 30px 20px;
+    margin: 50px auto;
+
+    .LinkGallery{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background-image: url(../img/2.jpg);
+    }
+
+    .LinkCasamiento{
+        grid-column: 1/3;
+        grid-row: 2/4;
+        background-image: url(../img/10.jpg);
+    }
+
+    .LinkBooks{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-image: url(../img/4.jpg);
+    }
+    
+    .LinkSweet{
+        grid-column: 3/4;
+        grid-row: 3/4;
+        background-image: url(../img/7.jpg);
+    }
+    
+    
+    .LinkAbout{
+        grid-column: 4/5;
+        grid-row: 3/4;
+        background-image: url(../img/6.jpg);
+    }
+    
+    .LinkContacto{
+        grid-column: 3/5;
+        grid-row: 1/3;
+        background-image: url(../img/5.jpg);
+    }
+
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: $fontM;
+        transition: 0.7s;
+        text-shadow: 2px 2px 2px $colorterciario ;
+        box-shadow: 2px 2px 2px $colorterciario ;
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+
+/* video antes del footer */
+
+.VideoSection{
+    grid-area: 'Videosection';
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0px auto 40px;
+    flex-wrap: wrap;
+
+    .vid{
+        width: 100%;
+        align-self: center;
+    }
+
+    .VideoParrafo{
+        color: $colorprimario;
+        margin: 10px 20px;
+        width: 100%;
+        text-align: justify;
+
+        .VideoParrafo{
+            h2{
+                font-size: $fontL;
+                color:$colorsecundario;
+            }
+
+            p{
+                font-size: $fontS;
+            }
+        }
+    }
+}
+
+/* Footer Fin De Pagina */
+
+.IndexFooter{
+    grid-area: 'footer';
+    display: flex;
+    width: 100%;
+    border-top: 1px $colorprimario solid;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+
+    ul{
+        display: flex;
+        margin: auto;
+
+        li{
+            list-style: none;
+
+            a{
+                color: $colorprimario;
+                text-decoration: none;
+                font-size: $fontS;
+                display: flex;
+                padding: 20px;
+                align-items: center;
+                &:hover{
+                    color: $colorsecundario;
+
+                    img{
+                        animation: vibracion 0.5s linear infinite;
+                    }
+                }
+            }
+
+            img{
+                width: 40px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    div{
+        color: $colorprimario;
+        padding: 0px auto;
+        margin: auto  ;
+        font-size: $fontS;
+        display: flex;
+        align-items: center;
+        height: 150px;
+
+        p{
+            margin: auto 0px;
+        }
+
+        .Logo{
+            img{
+                width: 100px;
+            }
+        }
+    }
+}
+
+
+/* Efecto logo rotatorio */
+@keyframes rotationy {
+    from {
+    transform: rotatey(0deg);
+    }
+    50% {
+    transform: rotatey(0deg);
+    }
+    to {
+    transform: rotatey(359deg);
+    }
+}
+
+@keyframes vibracion {
+    from {
+    transform: rotate(-10deg);
+    }
+    50% {
+    transform: rotate(10deg);
+    }
+    to {
+    transform: rotate(-10deg);
+    }
+}
+
+/*  media query pantalla menores a 1300px */
+
+@media only screen and (max-width: 1300px){
+
+    *{
+        font-size: 14px;
+    }
+
+    /* Index Frase */
+
+    .IndexFrase{
+        margin:50px auto 50px;
+        padding: 10px 50px;
+
+        h2{
+        padding: 0px 0px 20px;
+        }
+
+        p{
+        padding: 20px 0px 0px;
+        }
+    }
+
+    /* carrusel bootstrap index */
+
+    .carousel{
+        width: 80%;
+        margin: 50px auto;
+
+        .carousel-inner{
+            width: 80%;
+        }
+
+        img{
+            height: 300px;
+        }
+    }
+
+    /* video antes del footer */
+
+    .VideoParrafo{
+        margin: 5px 20px;
+    }
+
+    /* Footer Fin De Pagina */
+
+    .IndexFooter ul li a{
+        padding: 15px;
+    }
+
+    /* Footer Logo mas Frase */
+
+    .IndexFooter .Logo img{
+        width: 80px;
+    }
+
+}
+
+/* media query pantallas menores a 1000px */
+
+@media only screen and (max-width: 1000px){
+    *{
+        font-size: 13px;
+    }
+
+    /* ---Nav-Bar--- */
+
+    .NavBarSec{
+        flex-direction: column;
+
+        ul{
+            margin:auto 0px 10px;
+        }
+
+        div{
+            align-self: flex-start;
+            margin-left:20px;
+        }
+    }
+
+    /* Div Video Principal */
+
+    .video video{
+        height: 60vh;
+    }
+
+    /* Index Frase */
+
+    .IndexFrase{
+        margin:40px auto 40px;
+        padding: 10px 30px;
+    }
+
+    /* carrusel bootstrap index */
+
+    .carousel{
+        width: 90%;
+    }
+
+    /* Links secciones con imagenes */
+
+    .IndexMain{
+        height: 70vh;
+        width: 90%;
+    }
+
+    /* video antes del footer */
+
+    .VideoSection{
+        width: 90%;
+    }
+
+    /* Footer Fin De Pagina */
+
+    .IndexFooter{
+        flex-direction: column-reverse;
+    }
+
+    /* Footer Logo mas Frase */
+
+    .IndexFooter div{
+        height: 90px;
+        flex-direction: row-reverse;
+        justify-content: end;
+        width: 100%;
+    }
+}
+
+/* media query pantallas menores a 700px */
+
+@media only screen and (max-width: 699px){
+    *{
+        font-size: 11px;
+    }
+
+       /* video antes del footer */
+
+    .VideoSection{
+        grid-template-rows: 1fr 1fr;
+        width: 90%;
+        margin: 0px auto 10px;
+
+        .vid{
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+        
+        .VideoParrafo{
+            grid-column: 1/3;
+            grid-row: 2/3;
+            margin: 10px 0px;
+        }
+    }
+
+    /* Footer Fin De Pagina */
+
+    .IndexFooter ul li img{
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    /* Footer Logo mas Frase */
+
+    .IndexFooter .Logo img{
+        width: 70px;
+    }
+
+    /* Pagina Galery */
+
+    .GalleryImgPage{
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80%;
+        height: 600px;
+        grid-gap: 5px 10px;
+    }
+}
+
+/* media query pantallas menores a 600px */
+
+@media only screen and (max-width: 599px){
+    *{
+        font-size: 10px;
+    }
+
+    /* ---Nav-Bar--- */
+
+    .NavBarSec{
+
+        a{
+            padding: 0px 25px;
+        }
+
+        img{
+            width: 50px;
+        }
+    }
+
+    /* Div Video Principal */
+
+    .video video{
+        height: 50vh;
+    }
+
+    /* Index Frase */
+
+    .IndexFrase{
+        margin:20px auto 20px;
+        padding: 5px 15px;
+
+        h2{
+            padding: 0px 0px 10px;
+        }
+
+        p{
+            padding: 10px 0px 0px;
+        }
+    }
+
+    /* carrusel bootstrap index */
+
+    .carousel{
+        margin: 30px auto;
+        
+        img{
+            height: 180px;
+        }
+    }
+    
+    /* Links secciones con imagenes */
+
+    .IndexMain{
+        grid-template-rows: repeat(4, 1fr);
+        height: 60vh;
+        grid-gap: 20px 10px;
+        margin: 60px auto;
+
+        .LinkGallery{
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+        
+        
+        .LinkCasamiento{
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+        
+        .LinkBooks{
+            grid-column: 1/3;
+            grid-row: 3/5;
+        }
+        
+        .LinkSweet{
+            grid-column: 3/5;
+            grid-row: 3/4;
+        }
+        
+        
+        .LinkAbout{
+            grid-column: 3/5;
+            grid-row: 4/5;
+        }
+        
+        .LinkContacto{
+            grid-column: 3/5;
+            grid-row: 1/3;
+        }        
+    }
+
+    /* Footer Fin De Pagina */
+
+    .IndexFooter{
+        .IndexFooter ul{
+            flex-wrap: wrap;
+
+            a{
+                flex-direction: column;
+            }
+
+            li{
+                img{
+                    width: 20px;
+                }
+            }
+        }
+
+        div{
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .Logo{
+            img{
+                display: none;
+                }
+            }
+        }
+}
