@@ -213,15 +213,13 @@ $fontL: 2.5em;
         width: 100%;
         text-align: justify;
 
-        .VideoParrafo{
-            h2{
-                font-size: $fontL;
-                color:$colorsecundario;
-            }
+        h2{
+            font-size: $fontL;
+            color:$colorsecundario;
+        }
 
-            p{
-                font-size: $fontS;
-            }
+        p{
+            font-size: 1.2em;
         }
     }
 }

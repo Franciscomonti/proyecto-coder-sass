@@ -250,13 +250,13 @@
   text-align: justify;
 }
 
-.VideoSection .VideoParrafo .VideoParrafo h2 {
+.VideoSection .VideoParrafo h2 {
   font-size: 2.5em;
   color: #f77f00;
 }
 
-.VideoSection .VideoParrafo .VideoParrafo p {
-  font-size: 1.5em;
+.VideoSection .VideoParrafo p {
+  font-size: 1.2em;
 }
 
 /* Footer Fin De Pagina */
