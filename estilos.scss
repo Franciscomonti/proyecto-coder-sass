@@ -3,6 +3,7 @@ $colorprimario: white;
 $colorsecundario: #f77f00;
 $colorterciario: black;
 
+$fontXS: 1.2em;
 $fontS: 1.5em;
 $fontM: 2em;
 $fontL: 2.5em;
@@ -51,7 +52,7 @@ $fontL: 2.5em;
         a{
             text-decoration: none;
             color: $colorprimario;
-            font-size: $fontS;
+            font-size: $fontXS;
             padding: 0px 40px;
             
         }
@@ -245,7 +246,7 @@ $fontL: 2.5em;
             a{
                 color: $colorprimario;
                 text-decoration: none;
-                font-size: $fontS;
+                font-size: $fontXS;
                 display: flex;
                 padding: 20px;
                 align-items: center;
